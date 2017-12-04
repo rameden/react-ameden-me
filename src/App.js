@@ -7,7 +7,6 @@ import headshot from './media/headshot.jpg';
 import './App.css';
 var createReactClass = require('create-react-class');
 
-//consts
 const Swap = ReactSwap;
 const Resume = props => <div className="resume" {...props} />;
 const Bio = props => <div className="bio" {...props} />;
@@ -35,18 +34,13 @@ const Header = createReactClass({
           <Image src={headshot} circle width="50"/>
         </a>
         <Modal show={this.state.showModal} onHide={this.close}>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
-          </Modal.Header>
           <Modal.Body>
-          <div className="modal-header uk-text-center">
-          <Image src={headshot} circle width="100"/>
-          <h2 className="uk-margin-medium-top">Hi, I'm Ryley.</h2>
-              </div>
+          <a onClick={this.close}>X</a>
+            <div className="modal-header uk-text-center">
+              <Image src={headshot} circle width="100"/>
+              <h2 className="uk-margin-medium-top">Hi, Im Ryley.</h2>
+            </div>
           </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={this.close}>Close</Button>
-          </Modal.Footer>
         </Modal>
       </header>
     );
@@ -64,15 +58,14 @@ const MyResume = createReactClass({
 const MyBio = createReactClass({
   render() {
     return(
-      <p>MyBio</p>
+      <p>My Bio</p>
     );
   }
 });
 
 
-
 class App extends Component {
-  
+
   state = {opened: false};
   onClick = () => {
     this.setState({opened: !this.state.opened});
@@ -89,6 +82,7 @@ class App extends Component {
           <Resume className="ame-margin-default"><MyResume /></Resume>
         </ReactSwap>
       </div>
+
     );
   }
 }
