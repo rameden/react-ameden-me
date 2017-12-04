@@ -2,11 +2,17 @@
   "name": "react-ameden-me",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://rameden.github.io/rameden/react-ameden-me",
+  "homepage": "https://rameden.github.io/react-ameden-me/",
   "dependencies": {
+    "bootstrap": "^3.3.7",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
+    "react-bootstrap": "^0.31.5",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17"
+    "react-jsx": "^1.0.0",
+    "react-native": "^0.46.4",
+    "react-scripts": "1.0.17",
+    "react-swap": "^2.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
