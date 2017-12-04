@@ -1,29 +1,31 @@
-.App {
-  text-align: center;
+#MainApp{
+  max-width: 1200px;
+  padding: 0 15px;
+  margin:0 auto;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+header {
+  width: 100%;
+  padding: 25px;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.position-top {
+  top: 0;
+  left: 0;
+  right: 0;
 }
-
-.App-title {
-  font-size: 1.5em;
+.align-right {
+  margin-left: 15px;
+  float: right;
 }
-
-.App-intro {
-  font-size: large;
+.about-trigger img{
+  display: inline-block;
+  transition: transform .25s cubic-bezier(.175,.885,.32,1.275);
+  transform-origin: center center;
 }
-
-.ame-margin-default{
-  margin:15px 0px;
+.about-trigger:hover{
+  cursor: pointer;
+}
+.about-trigger:hover img {
+  transform: scale(1.25);
 }
 
 @keyframes App-logo-spin {
