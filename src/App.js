@@ -12,14 +12,16 @@ const Resume = props => <div className="resume" {...props} />;
 const Bio = props => <div className="bio" {...props} />;
 
 
+
 class Header extends React.Component {
 
-  state() {
-    return { 
-      showModal: false 
-    };
-  };
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      showModal: false
+    };    
+  }
+  
   close() {
     this.setState({ showModal: false });
   };
@@ -50,6 +52,28 @@ class Header extends React.Component {
   }
 }
 
+class InfoSwap extends React.Component {
+  state = {opened: false};
+  onClick = () => {
+    this.setState({opened: !this.state.opened});
+    document.body.classList.toggle('resume', this.props.isDark)
+
+  };
+  render() {
+    return (
+      <div>
+      <Button onClick={this.onClick}>{this.state.opened ? `Ameden.me` : `Resume`}</Button>
+
+      <ReactSwap isSwapped={this.state.opened}>
+          <Bio className="ame-margin-default"><MyBio /></Bio>
+          <Resume className="ame-margin-default"><MyResume /></Resume>
+      </ReactSwap>
+     
+      </div>
+    );
+  }
+}
+
 class MyResume extends React.Component{
   render() {
     return(
@@ -65,24 +89,14 @@ class MyBio extends React.Component{
     );
   }
 }
- 
+
 class App extends React.Component {
-
-  state = {opened: false};
-  onClick = () => {
-    this.setState({opened: !this.state.opened});
-    document.body.classList.toggle('resume', this.props.isDark)
-  };
-
+  
   render() {
     return (
       <div className="App">
-      <Header />
-        <Button onClick={this.onClick}>{this.state.opened ? `Ameden.me` : `Resume`}</Button>
-        <ReactSwap isSwapped={this.state.opened}>
-          <Bio className="ame-margin-default"><MyBio /></Bio>
-          <Resume className="ame-margin-default"><MyResume /></Resume>
-        </ReactSwap>
+        <Header />
+        <InfoSwap />
       </div>
 
     );
