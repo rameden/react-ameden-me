@@ -40,7 +40,7 @@ class Header extends React.Component {
           <a onClick={this.close.bind(this)}>X</a>
             <div className="modal-header uk-text-center">
               <Image src={headshot} circle width="100"/>
-              <h2 className="uk-margin-medium-top">Hi, I'm Ryley.</h2>
+              <h2 className="uk-margin-medium-top">Hi, Im Ryley.</h2>
             </div>
           </Modal.Body>
 
