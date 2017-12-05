@@ -5,16 +5,15 @@
   "homepage": "https://rameden.github.io/react-ameden-me/",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "create-react-class": "^15.6.2",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-bootstrap": "^0.31.5",
     "react-dom": "^16.2.0",
     "react-jsx": "^1.0.0",
+    "react-loading-bar": "0.0.6",
     "react-native": "^0.46.4",
     "react-redux": "^5.0.6",
-    "react-scripts": "1.0.17",
-    "react-swap": "^2.0.2"
+    "react-scripts": "1.0.17"
   },
   "scripts": {
     "start": "react-scripts start",

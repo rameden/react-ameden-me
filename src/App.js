@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import ReactSwap from 'react-swap';
 import { Button, Modal, OverlayTrigger, Image, Jumbotron } from 'react-bootstrap';
+import Loading from 'react-loading-bar'
+import 'react-loading-bar/dist/index.css'
+
 //Custom Deps
 import ResumeImp from './components/resume';
 import logo from './media/logo.svg';
@@ -52,7 +55,11 @@ class Main extends React.Component {
             <ResumeImp />
           </Modal.Body>
         </Modal>
-        {this.state.showLoader ? <div> <img src={logo} className="App-logo" alt="logo" /></div> : null}
+        <Loading
+          show={this.state.showLoader}
+          color="#03adf7"
+          showSpinner={false}
+        />
       </div>
     );
   }
