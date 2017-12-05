@@ -1,12 +1,14 @@
+//Deps
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import ReactSwap from 'react-swap';
 import {  Navbar, Nav, NavItem, Button, Modal, OverlayTrigger, Image } from 'react-bootstrap';
+//Custom Deps
+import ResumeImp from './components/resume';
 import logo from './media/logo.svg';
 import headshot from './media/headshot.jpg';
 import './App.css';
-var createReactClass = require('create-react-class');
 
 const Resume = (props) => {
   const { showResume } = props;
@@ -52,7 +54,7 @@ class Header extends React.Component {
           <a onClick={this.close.bind(this)}>X</a>
             <div className="modal-header uk-text-center">
               <Image src={headshot} circle width="100"/>
-              <h2 className="uk-margin-medium-top">Hi, Im Ryley.</h2>
+              [<h2 className="uk-margin-medium-top">Hi, Im Ryley.</h2>]
             </div>
           </Modal.Body>
 
@@ -65,7 +67,7 @@ class Header extends React.Component {
 class MyResume extends React.Component{
   render() {
     return(
-      <p>My Resume</p>
+      <ResumeImp />
     );
   }
 }
