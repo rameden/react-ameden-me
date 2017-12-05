@@ -1,16 +1,15 @@
 //Deps
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
-import ReactSwap from 'react-swap';
+//import PropTypes from 'prop-types';
+//import ReactDOM from 'react-dom';
 import { Button, Modal, OverlayTrigger, Image, Jumbotron } from 'react-bootstrap';
 import Loading from 'react-loading-bar'
 import 'react-loading-bar/dist/index.css'
 
 //Custom Deps
 import ResumeImp from './components/resume';
-import logo from './media/logo.svg';
-import headshot from './media/headshot.jpg';
+//import logo from './media/logo.svg';
+//import headshot from './media/headshot.jpg';
 import './App.css';
 
 class Main extends React.Component {
@@ -39,7 +38,6 @@ class Main extends React.Component {
   };
 
   render() {
-
     return (
       <div>
         <Jumbotron>
