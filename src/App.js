@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import ReactSwap from 'react-swap';
 import {  Navbar, Nav, NavItem, Button, Modal, OverlayTrigger, Image } from 'react-bootstrap';
@@ -7,11 +8,20 @@ import headshot from './media/headshot.jpg';
 import './App.css';
 var createReactClass = require('create-react-class');
 
-const Swap = ReactSwap;
-const Resume = props => <div className="resume" {...props} />;
-const Bio = props => <div className="bio" {...props} />;
+const Resume = (props) => {
+  const { showResume } = props;
+ 
+  return (
+    <div className="container">
+     <Button onClick={props.handleToggle}>Toggle</Button>
+      {showResume && <div><MyResume /></div>}
+    </div>
+  );
+};
 
-
+Resume.propTypes = {
+  showResume: PropTypes.bool.isRequired
+};
 
 class Header extends React.Component {
 
@@ -52,28 +62,6 @@ class Header extends React.Component {
   }
 }
 
-class InfoSwap extends React.Component {
-  state = {opened: false};
-  onClick = () => {
-    this.setState({opened: !this.state.opened});
-    document.body.classList.toggle('resume', this.props.isDark)
-
-  };
-  render() {
-    return (
-      <div>
-      <Button onClick={this.onClick}>{this.state.opened ? `Ameden.me` : `Resume`}</Button>
-
-      <ReactSwap isSwapped={this.state.opened}>
-          <Bio className="ame-margin-default"><MyBio /></Bio>
-          <Resume className="ame-margin-default"><MyResume /></Resume>
-      </ReactSwap>
-     
-      </div>
-    );
-  }
-}
-
 class MyResume extends React.Component{
   render() {
     return(
@@ -82,21 +70,20 @@ class MyResume extends React.Component{
   }
 }
 
-class MyBio extends React.Component{
-  render() {
-    return(
-      <p>My Bio</p>
-    );
-  }
-}
-
 class App extends React.Component {
   
+  state = {showResume: false}
+  
+  handleToggle = () => {
+    this.setState({showResume: !this.state.showResume});
+    document.body.classList.toggle('resume', this.props.isDark)
+   };
+
   render() {
     return (
       <div className="App">
         <Header />
-        <InfoSwap />
+        <Resume showResume={this.state.showResume} handleToggle={this.handleToggle}/>
       </div>
 
     );
