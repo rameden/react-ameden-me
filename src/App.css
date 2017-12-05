@@ -1,7 +1,13 @@
 #MainApp{
-  max-width: 1200px;
-  padding: 0 15px;
+  max-width: 100%;
+}
+.App{
+  width:800px;
   margin:0 auto;
+  padding:30px;
+}
+.App .jumbotron{
+  padding:30px;
 }
 header {
   width: 100%;

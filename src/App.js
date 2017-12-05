@@ -3,32 +3,17 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import ReactSwap from 'react-swap';
-import {  Navbar, Nav, NavItem, Button, Modal, OverlayTrigger, Image } from 'react-bootstrap';
+import { Button, Modal, OverlayTrigger, Image, Jumbotron } from 'react-bootstrap';
 //Custom Deps
 import ResumeImp from './components/resume';
 import logo from './media/logo.svg';
 import headshot from './media/headshot.jpg';
 import './App.css';
 
-const Resume = (props) => {
-  const { showResume } = props;
- 
-  return (
-    <div className="container">
-     <Button onClick={props.handleToggle}>Toggle</Button>
-      {showResume && <div><MyResume /></div>}
-    </div>
-  );
-};
-
-Resume.propTypes = {
-  showResume: PropTypes.bool.isRequired
-};
-
-class Header extends React.Component {
+class Main extends React.Component {
 
   constructor(props) {
-    super(props);
+    super();
     this.state = {
       showModal: false
     };    
@@ -45,47 +30,31 @@ class Header extends React.Component {
   render() {
 
     return (
-      <header className="position-top">
-        <a className="about-trigger align-right" onClick={this.open.bind(this)}>
-          <Image src={headshot} circle width="50"/>
-        </a>
+      <div>
+        <Jumbotron>
+          <h1>Hello, world!</h1>
+          <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+          <Button className="about-trigger" onClick={this.open.bind(this)}>Modal</Button> 
+        </Jumbotron>
+        
         <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
           <Modal.Body>
           <a onClick={this.close.bind(this)}>X</a>
             <div className="modal-header uk-text-center">
-              <Image src={headshot} circle width="100"/>
-              [<h2 className="uk-margin-medium-top">Hi, Im Ryley.</h2>]
             </div>
+            <ResumeImp />
           </Modal.Body>
-
         </Modal>
-      </header>
-    );
-  }
-}
-
-class MyResume extends React.Component{
-  render() {
-    return(
-      <ResumeImp />
+      </div>
     );
   }
 }
 
 class App extends React.Component {
-  
-  state = {showResume: false}
-  
-  handleToggle = () => {
-    this.setState({showResume: !this.state.showResume});
-    document.body.classList.toggle('resume', this.props.isDark)
-   };
-
   render() {
     return (
       <div className="App">
-        <Header />
-        <Resume showResume={this.state.showResume} handleToggle={this.handleToggle}/>
+        <Main />
       </div>
 
     );
