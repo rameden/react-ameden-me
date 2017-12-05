@@ -15,7 +15,8 @@ class Main extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      showModal: false
+      showModal: false,
+      showLoader: false
     };    
   }
   
@@ -24,7 +25,14 @@ class Main extends React.Component {
   };
 
   open() {
-    this.setState({ showModal: true });
+    this.setState({showLoader:true})
+    setTimeout(() => {
+      this.setState({ showModal: true });
+      this.setState({ showLoader: false });
+    }, 1000);
+    
+    
+    
   };
 
   render() {
@@ -36,8 +44,7 @@ class Main extends React.Component {
           <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
           <Button className="about-trigger" onClick={this.open.bind(this)}>Modal</Button> 
         </Jumbotron>
-        
-        <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
+        <Modal animation={true} backdropClassName="modalBackdropOpen" show={this.state.showModal} onHide={this.close.bind(this)}>
           <Modal.Body>
           <a onClick={this.close.bind(this)}>X</a>
             <div className="modal-header uk-text-center">
@@ -45,6 +52,7 @@ class Main extends React.Component {
             <ResumeImp />
           </Modal.Body>
         </Modal>
+        {this.state.showLoader ? <div> <img src={logo} className="App-logo" alt="logo" /></div> : null}
       </div>
     );
   }
