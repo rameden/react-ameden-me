@@ -1,22 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,600,700|Oswald:300,700|Nixie+One');
+
+@font-face {
+  font-family: "Galano Grotesque Bold";
+  src: url('./fonts/Rene Bieder - Galano Grotesque Bold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: "Galano Grotesque Semi Bold";
+  src: url('./fonts/Rene Bieder - Galano Grotesque.otf') format('truetype');
+
+}
+
+@font-face {
+  font-family: "Galano Grotesque Medium";
+  src: url('./fonts/Rene Bieder - Galano Grotesque Medium.otf') format('truetype');
+  
+}
+
+
+@font-face {
+  font-family: "Galano Grotesque";
+  src: url('./fonts/Rene Bieder - Galano Grotesque.otf') format('truetype');
+
+}
+body{
+  font-size:inherit !important;
+}
+html {
+  font: 400 16px/1.7 muli,sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+h1,
+h2,
+h3,
+h4,
+h5{
+  font-family: 'Galano Grotesque Semi Bold', muli sans-serif !important;
+  color:#222;
+}
+h1, h2 {
+  font-weight: 700 !important;
+}
+h2{
+  font-size:32px !important;
+}
+h4 {
+  font-weight: 900 !important;
+  font-size: 20px !important;
+}
+p {
+  font-family: muli,sans-serif;
+  line-height: 1.75em;
+}
+strong{
+  font-family: 'Galano Grotesque Semi Bold', muli sans-serif !important;
+}
+.margin-medium-bottom{
+  margin-bottom:30px;
+}
 .mainAppWrapper{
   position: relative;
   height: 100vh;
 }
 .mainAppBody{
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
-  transform: translate(-40%, -50%);
+  transform: translate(-50%, -50%);
 }
 .mainAppHeader{
   text-align: center;
+  margin-bottom: 30px;
+}
+.mainAppHeader h2{
+  margin-bottom:20px;
 }
 .modal-dialog {
-  width: 95% !important;
-  height: 95%;
+  width: 100% !important;
+  height: 100%;
 }
 .modal-content{
   height:100%;
+}
+.modal{
+  padding:0 !important;
+}
+.modal-dialog{
+  margin: 0 !important;
+}
+.modal-content{
+  border-radius: 0 !important;
+}
+.modalClose{
+  float:right;
+  color:#333;
+  opacity: .5;
+}
+.modalClose:hover{
+  text-decoration: none;
+  opacity: 1;
+  color:#333;
+  cursor: pointer;
+}
+[class^=social-] svg {
+  width: 1.75em;
+  height: 1.75em;
+  fill: #fff;
+}
+.icon {
+  top: -1px;
+  max-width: 100%;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  fill: currentColor;
+  vertical-align: middle;
+}
+[class^=social-] {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url(./media/pattern.png);
+  background-repeat: no-repeat;
+  text-align: center;
+  line-height: 50px;
+  transform-origin: center center;
+  margin-right: 10px;
+}
+.social-github {
+  background-position: 45% 70%;
+}
+.social-linkedin {
+  background-position: 70% 10%;
+}
+.social-facebook {
+  background-position: 50% 25%;
+}
+.flex {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.flex-center {
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+[class^=social-]:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,.3);
+  transform: translateY(-2px);
+}
+.hidden{
+  display:none;
 }
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
