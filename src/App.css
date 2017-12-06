@@ -1,53 +1,15 @@
-#MainApp{
-  max-width: 100%;
-}
-.App{
-  width:800px;
-  margin:0 auto;
-  padding:30px;
-}
-.App .jumbotron{
-  padding:30px;
-}
-header {
-  width: 100%;
-  padding: 25px;
-}
-.position-top {
-  top: 0;
-  left: 0;
-  right: 0;
-}
-.align-right {
-  margin-left: 15px;
-  float: right;
-}
-.about-trigger img{
-  display: inline-block;
-  transition: transform .25s cubic-bezier(.175,.885,.32,1.275);
-  transform-origin: center center;
-}
-.about-trigger:hover{
-  cursor: pointer;
-}
-.about-trigger:hover img {
-  transform: scale(1.25);
-}
-.loader {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.mainAppWrapper{
+  position: relative;
   height: 100vh;
-  background-color: white;
-  animation: fade 2s linear;
 }
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.mainAppBody{
   position: absolute;
+  top: 40%;
   left: 50%;
-  top: 50%;
+  transform: translate(-40%, -50%);
+}
+.mainAppHeader{
+  text-align: center;
 }
 .modal-dialog {
   width: 95% !important;
