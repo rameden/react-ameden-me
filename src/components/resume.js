@@ -3,56 +3,58 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { ProgressBar } from 'react-bootstrap';
 
-const Exp = (props) => {
-    return (
-        <div>
-            <p>{props.company}</p>
-            <p>{props.empTitle}</p>
-            <p>{props.desc}</p>
-            <p>{props.timeFrame}</p>
-            <hr></hr>
-        </div>
+class Exp extends React.Component{
+    render() {
+        return (
+            <div>
+                <p>{this.props.company}</p>
+                <p>{this.props.empTitle}</p>
+                <p>{this.props.desc}</p>
+                <p>{this.props.timeFrame}</p>
+                <hr></hr>
+            </div>
         )    
+    }
 }
-
 Exp.propTypes = {
     company: PropTypes.string,
     empTitle: PropTypes.string,
     desc: PropTypes.string,
     timeFrame: PropTypes.string
 };
-
   
-const Skill = (props) => {
-    return (
-        <div>
-            <p>{props.skill}</p>
-            <ProgressBar >
-                <ProgressBar  now={props.prof} key={1}/>
-                <ProgressBar  striped bsStyle="info" now={100 - props.prof} key={2} />
-            </ProgressBar>
-            <hr></hr>
-        </div>
+class Skill extends React.Component{
+    render() {
+        return (
+            <div>
+                <p>{this.props.skill}</p>
+                <ProgressBar >
+                    <ProgressBar  now={this.props.prof} key={1}/>
+                    <ProgressBar  striped bsStyle="info" now={100 - this.props.prof} key={2} />
+                </ProgressBar>
+                <hr></hr>
+            </div>
         )    
+    }
 }
-
 Exp.propTypes = {
     skill: PropTypes.string,
     prof: PropTypes.number,
 };
 
-const Project = (props) => {
-    return (
-        <div>
-            <p>{props.projectTitle}</p>
-            <p>{props.projectURL}</p>
-            <p>{props.projectDesc}</p>
-            <p>{props.projectDateComp}</p>
-            <hr></hr>
-        </div>
+class Project extends React.Component{
+    render(){
+        return (
+            <div>
+                <p>{this.props.projectTitle}</p>
+                <p>{this.props.projectURL}</p>
+                <p>{this.props.projectDesc}</p>
+                <p>{this.props.projectDateComp}</p>
+                <hr></hr>
+            </div>
         )    
+    }
 }
-
 Exp.propTypes = {
     projectTitle: PropTypes.string,
     projectURL: PropTypes.string,
@@ -82,6 +84,12 @@ class Resume extends Component{
                 <Skill
                     skill = "React"
                     prof = {60}
+                />
+                <Project
+                    projectTitle = "Dyn.com"
+                    projectURL = "Dyn.com"
+                    projectDesc = "Description"
+                    projectDateComp = "2017"
                 />
             </div>
         )

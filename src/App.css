@@ -60,6 +60,9 @@ strong{
 .margin-medium-bottom{
   margin-bottom:30px;
 }
+.margin-top{
+  margin-top:30px;
+}
 .mainAppWrapper{
   position: relative;
   height: 100vh;
@@ -92,6 +95,7 @@ strong{
 }
 .modal-content{
   border-radius: 0 !important;
+  overflow-y: scroll;
 }
 .modalClose{
   float:right;
@@ -155,6 +159,40 @@ strong{
 }
 .hidden{
   display:none;
+}
+.about-trigger{
+  background-color: transparent;
+  background-image: url(./media/pattern.png)!important;
+  background-repeat: no-repeat;
+  color: #fff !important;
+  background-position: 70% 90%!important;
+}
+.main-btn{
+  margin: 0;
+  padding: 0 32px;
+  height: 48px;
+  border: 0;
+  border-radius: 3px;
+  background: #ececec;
+  box-shadow: 0 0 15px rgba(0,0,0,.15);
+  color: #333;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  font: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 48px;
+  transition: all .25s cubic-bezier(.645,.045,.355,1);
+  transform-origin: center center;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: muli,sans-serif;
+}
+.text-center{
+  text-align: center;
 }
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

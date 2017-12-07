@@ -1,8 +1,7 @@
 //Deps
 import React, { Component } from 'react';
-//import PropTypes from 'prop-types';
-//import ReactDOM from 'react-dom';
-import { Button, Modal, OverlayTrigger, Image, Grid, Col, Row } from 'react-bootstrap';
+import PropTypes from 'prop-types';
+import { Modal, OverlayTrigger, Image, Grid, Col, Row } from 'react-bootstrap';
 import Loading from 'react-loading-bar'
 import 'react-loading-bar/dist/index.css'
 
@@ -11,6 +10,25 @@ import ResumeImp from './components/resume';
 //import logo from './media/logo.svg';
 import headshot from './media/headshot.jpg';
 import './App.css';
+
+class SingleSocial extends React.Component {
+  render() {
+      return (
+          <div>
+          <a target="_blank" className={`social-${this.props.socialType}`} href={this.props.socialLink}>
+              <svg className="icon">
+              <use xlinkHref={"#" + this.props.socialType}></use>
+              </svg>
+          </a>
+          </div>
+      )
+  }
+}
+
+SingleSocial.propTypes = {
+  socialType: PropTypes.string,
+  socialLink: PropTypes.string,
+}
 
 class Social extends React.Component{
   render(){
@@ -28,27 +46,18 @@ class Social extends React.Component{
       </symbol>
       </svg>
         <div className="socail-modal flex flex-center">
-          <div>
-          <a className="social-github" href="https://github.com/rameden">
-            <svg className="icon">
-              <use xlinkHref="#github"></use>
-            </svg>
-          </a>
-          </div>
-          <div>
-          <a className="social-linkedin" href="https://github.com/rameden">
-            <svg className="icon">
-              <use xlinkHref="#linkedin"></use>
-            </svg>
-          </a>
-          </div>
-          <div>
-          <a className="social-facebook" href="https://github.com/rameden">
-            <svg className="icon">
-              <use xlinkHref="#facebook"></use>
-            </svg>
-          </a>
-          </div>
+          <SingleSocial 
+            socialType="github"
+            socialLink="https://github.com/rameden"
+          />
+          <SingleSocial 
+            socialType="linkedin"
+            socialLink="https://www.linkedin.com/in/ryley-ameden-b6295754/"
+          />
+          <SingleSocial 
+            socialType="facebook"
+            socialLink="https://www.facebook.com/rcameden"
+          />
         </div>
       </div>
     );
@@ -87,12 +96,12 @@ class Main extends React.Component {
               <h2>Hello, I'm Ryley</h2>
               <Social />
             </div>
-          <p className="margin-medium-bottom">I modernize, customize and other ‘ize-y things at Dyn! My background involves pushing the limits of of what we can build on the backend and how we can experience it on the frontend. My passion is finding the best way to complete a project, optimization and teaching those around me.</p>
+          <p className="margin-medium-bottom">I modernize, customize and other ‘ize-y things at Oracel + Dyn! My background involves pushing the limits of of what we can build on the backend and how we can experience it on the frontend. My passion is finding the best way to complete a project, optimization and teaching those around me.</p>
           <Grid bsClass="gridWrapper">
             <Row className="show-grid">
               <Col xs={12} md={6}>
               <h4>Working Together?</h4>
-              <p>My motto is: “Helping everyday business with development and marketing” Sound good? Contact me.</p>
+              <p>My motto is...well I am still working on that</p>
               </Col>
               <Col xs={12} md={6}>
               <h4>How'd you build this site?!</h4>
@@ -100,7 +109,9 @@ class Main extends React.Component {
               </Col>
             </Row>
             </Grid> 
-          <Button className="about-trigger" onClick={this.open.bind(this)}>Résumé</Button> 
+            <div className="margin-top">
+            <button className="main-btn about-trigger" onClick={this.open.bind(this)}>Résumé</button> 
+            </div>
           </div>
         </div>
         <Modal animation={true} show={this.state.showModal} onHide={this.close.bind(this)}>
