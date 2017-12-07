@@ -26,6 +26,7 @@
 body{
   font-size:inherit !important;
 }
+
 html {
   font: 400 16px/1.7 muli,sans-serif !important;
   -webkit-font-smoothing: antialiased;
@@ -68,11 +69,10 @@ strong{
   height: 100vh;
 }
 .mainAppBody{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+position: relative;
+padding:30px;
 }
+
 .mainAppHeader{
   text-align: center;
   margin-bottom: 30px;
@@ -193,6 +193,27 @@ strong{
 }
 .text-center{
   text-align: center;
+}
+@media (min-width: 1224px){
+  body{
+    background: rgba(250,250,250,.85) !important;
+  }
+  .mainAppBody{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding:30px;
+    margin:50px 0px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 0 6px -2px rgba(0,0,0,.15);
+    background-color: #fff;
+  }
+}
+@media (min-width: 1440){
+  .mainAppBody{
+    padding:0;
+  }
 }
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

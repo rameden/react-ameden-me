@@ -1,7 +1,9 @@
 //Deps
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Image, Grid, Col, Row } from 'react-bootstrap';
 import { ProgressBar } from 'react-bootstrap';
+import headshot from '../media/headshot.jpg';
 
 class Exp extends React.Component{
     render() {
@@ -68,6 +70,7 @@ class Resume extends Component{
         return (
             
             <div>
+                <Image src={headshot} width="100" circle />
                 <Exp 
                     company="Dyn + Oracle" 
                     empTitle="UI/UX Developer"

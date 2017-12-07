@@ -7,8 +7,7 @@ import 'react-loading-bar/dist/index.css'
 
 //Custom Deps
 import ResumeImp from './components/resume';
-//import logo from './media/logo.svg';
-import headshot from './media/headshot.jpg';
+import logo from './media/logo.png';
 import './App.css';
 
 class SingleSocial extends React.Component {
@@ -92,7 +91,7 @@ class Main extends React.Component {
         <div className="mainAppWrapper">
           <div className="mainAppBody">
             <div className="mainAppHeader">
-              <Image src={headshot} circle width="100" />
+              <Image src={logo} width="150" />
               <h2>Hello, I'm Ryley</h2>
               <Social />
             </div>
@@ -100,12 +99,12 @@ class Main extends React.Component {
           <Grid bsClass="gridWrapper">
             <Row className="show-grid">
               <Col xs={12} md={6}>
-              <h4>Working Together?</h4>
-              <p>My motto is...well I am still working on that</p>
+              <h4>Speaking/Consulting</h4>
+              <p>Have an event and/or consluting project you'd like me to be apart of? Awesome! <a href="mailto:ryley@ameden.me?subject=Consulting ameden.me">Let's chat.</a></p>
               </Col>
               <Col xs={12} md={6}>
               <h4>How'd you build this site?!</h4>
-              <p>Because I love open-source it's available for you to see. Find a bug? Report it! View source.</p>
+              <p>Because I love open-source it's available for you to see. Find a bug? Report it! <a target="_blank" href="https://github.com/rameden/react-ameden-me">View source.</a></p>
               </Col>
             </Row>
             </Grid> 
