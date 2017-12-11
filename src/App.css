@@ -25,6 +25,7 @@
 }
 body{
   font-size:inherit !important;
+  background:#fff !important;
 }
 
 html {
@@ -61,8 +62,17 @@ strong{
 .margin-medium-bottom{
   margin-bottom:30px;
 }
+.margin-bottom-remove{
+margin-bottom:0;
+}
+.margin-small-top{
+  margin-top:15px;
+}
 .margin-top{
   margin-top:30px;
+}
+.margin-right{
+  margin-right:15px;
 }
 .mainAppWrapper{
   position: relative;
@@ -72,7 +82,6 @@ strong{
 position: relative;
 padding:30px;
 }
-
 .mainAppHeader{
   text-align: center;
   margin-bottom: 30px;
@@ -107,6 +116,10 @@ padding:30px;
   opacity: 1;
   color:#333;
   cursor: pointer;
+}
+.modal-header {
+  padding: 30px 15px !important;
+  margin-bottom: 30px;
 }
 [class^=social-] svg {
   width: 1.75em;
@@ -193,6 +206,69 @@ padding:30px;
 }
 .text-center{
   text-align: center;
+}
+.float-left{
+  float:left;
+}
+.margin-remove{
+  margin-top:0;
+  margin-bottom:0;
+}
+.resume-intro-left{
+  margin-top:15px;
+  float:left;
+}
+.resume-intro-right{
+  float:right;
+  margin-top:30px;
+}
+.link-muted, .link-muted a, .link-muted a:hover, .link-muted:hover{
+  color:#444;
+}
+.skill hr{
+  display:none;
+}
+.progress {
+  height: 15px !important;
+  margin-bottom: 5px !important;
+}
+.customProgress.progress-bar {
+  background-color: #03adf7;
+  background-image: none;
+}
+.container {
+  width: 100% !important;
+}
+.bio{
+  padding:0 15px;
+}
+.single-exp,
+.single-project{
+  position: relative;
+}
+.badge {
+  position: absolute;
+  top: 0;
+  right:0;
+  background: #1d8acb;
+  font-weight: 700;
+  text-transform: none;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 3px !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+  padding: 5px 10px !important;
+  font-size: 12px !important;
+  line-height: 16px !important;
+}
+.badge-success {
+  border-color: #00cd8d !important;
+  background: #00cd8d !important;
+  color: #fff;
+}
+.badge-info {
+  border-color: #1489fe !important;
+  background: #1489fe !important;
+  color: #fff;
 }
 @media (min-width: 1224px){
   body{

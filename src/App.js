@@ -1,7 +1,7 @@
 //Deps
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { Modal, OverlayTrigger, Image, Grid, Col, Row } from 'react-bootstrap';
+import { Modal, Image, Grid, Col, Row } from 'react-bootstrap';
 import Loading from 'react-loading-bar'
 import 'react-loading-bar/dist/index.css'
 
@@ -100,11 +100,11 @@ class Main extends React.Component {
             <Row className="show-grid">
               <Col xs={12} md={6}>
               <h4>Speaking/Consulting</h4>
-              <p>Have an event and/or consluting project you'd like me to be apart of? Awesome! <a href="mailto:ryley@ameden.me?subject=Consulting ameden.me">Let's chat.</a></p>
+              <p>Have an event and/or consluting project you'd like me to be apart of? Awesome! <a rel="noopener noreferrer" href="mailto:ryley@ameden.me?subject=Consulting ameden.me">Let's chat.</a></p>
               </Col>
               <Col xs={12} md={6}>
               <h4>How'd you build this site?!</h4>
-              <p>Because I love open-source it's available for you to see. Find a bug? Report it! <a target="_blank" href="https://github.com/rameden/react-ameden-me">View source.</a></p>
+              <p>Because I love open-source it's available for you to see. Find a bug? Report it! <a target="_blank" rel="noopener noreferrer" href="https://github.com/rameden/react-ameden-me">View source.</a></p>
               </Col>
             </Row>
             </Grid> 
@@ -115,9 +115,7 @@ class Main extends React.Component {
         </div>
         <Modal animation={true} show={this.state.showModal} onHide={this.close.bind(this)}>
           <Modal.Body>
-          <a className="modalClose"onClick={this.close.bind(this)}>✖</a>
-            <div className="modal-header uk-text-center">
-            </div>
+          <a className="modalClose" onClick={this.close.bind(this)}>✖</a>
             <ResumeImp />
           </Modal.Body>
         </Modal>
