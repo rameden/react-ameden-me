@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react-ameden-me/precache-manifest.360ff6d25ea39b9c3b91678b7a751db9.js"
+  "/react-ameden-me/precache-manifest.86399fdcf7f444e05534021095ffd5a1.js"
 );
 
 self.addEventListener('message', (event) => {
