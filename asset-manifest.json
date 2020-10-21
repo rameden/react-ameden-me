@@ -1,17 +1,28 @@
 {
-  "main.css": "static/css/main.a9b93469.css",
-  "main.css.map": "static/css/main.a9b93469.css.map",
-  "main.js": "static/js/main.3e37b087.js",
-  "main.js.map": "static/js/main.3e37b087.js.map",
-  "static/media/Rene Bieder - Galano Grotesque Bold.otf": "static/media/Rene Bieder - Galano Grotesque Bold.6d10397a.otf",
-  "static/media/Rene Bieder - Galano Grotesque Medium.otf": "static/media/Rene Bieder - Galano Grotesque Medium.4718f245.otf",
-  "static/media/Rene Bieder - Galano Grotesque.otf": "static/media/Rene Bieder - Galano Grotesque.0db105f8.otf",
-  "static/media/glyphicons-halflings-regular.eot": "static/media/glyphicons-halflings-regular.f4769f9b.eot",
-  "static/media/glyphicons-halflings-regular.svg": "static/media/glyphicons-halflings-regular.89889688.svg",
-  "static/media/glyphicons-halflings-regular.ttf": "static/media/glyphicons-halflings-regular.e18bbf61.ttf",
-  "static/media/glyphicons-halflings-regular.woff": "static/media/glyphicons-halflings-regular.fa277232.woff",
-  "static/media/glyphicons-halflings-regular.woff2": "static/media/glyphicons-halflings-regular.448c34a5.woff2",
-  "static/media/headshot.jpg": "static/media/headshot.a58fe898.jpg",
-  "static/media/logo.png": "static/media/logo.90c17d31.png",
-  "static/media/pattern.png": "static/media/pattern.386f64b5.png"
+  "files": {
+    "main.css": "/react-ameden-me/static/css/main.eb7ed663.chunk.css",
+    "main.js": "/react-ameden-me/static/js/main.50eb3fa3.chunk.js",
+    "main.js.map": "/react-ameden-me/static/js/main.50eb3fa3.chunk.js.map",
+    "runtime-main.js": "/react-ameden-me/static/js/runtime-main.e4b30647.js",
+    "runtime-main.js.map": "/react-ameden-me/static/js/runtime-main.e4b30647.js.map",
+    "static/css/2.6414bb7b.chunk.css": "/react-ameden-me/static/css/2.6414bb7b.chunk.css",
+    "static/js/2.f561f054.chunk.js": "/react-ameden-me/static/js/2.f561f054.chunk.js",
+    "static/js/2.f561f054.chunk.js.map": "/react-ameden-me/static/js/2.f561f054.chunk.js.map",
+    "index.html": "/react-ameden-me/index.html",
+    "precache-manifest.360ff6d25ea39b9c3b91678b7a751db9.js": "/react-ameden-me/precache-manifest.360ff6d25ea39b9c3b91678b7a751db9.js",
+    "service-worker.js": "/react-ameden-me/service-worker.js",
+    "static/css/2.6414bb7b.chunk.css.map": "/react-ameden-me/static/css/2.6414bb7b.chunk.css.map",
+    "static/css/main.eb7ed663.chunk.css.map": "/react-ameden-me/static/css/main.eb7ed663.chunk.css.map",
+    "static/js/2.f561f054.chunk.js.LICENSE.txt": "/react-ameden-me/static/js/2.f561f054.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/react-ameden-me/static/media/pattern.386f64b5.png",
+    "static/media/headshot.jpg": "/react-ameden-me/static/media/headshot.a58fe898.jpg",
+    "static/media/logo.png": "/react-ameden-me/static/media/logo.90c17d31.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e4b30647.js",
+    "static/css/2.6414bb7b.chunk.css",
+    "static/js/2.f561f054.chunk.js",
+    "static/css/main.eb7ed663.chunk.css",
+    "static/js/main.50eb3fa3.chunk.js"
+  ]
 }
