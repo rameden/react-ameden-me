@@ -1,38 +1,311 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Muli:400,600,700|Oswald:300,700|Nixie+One');
+
+@font-face {
+  font-family: "Galano Grotesque Bold";
+  src: url('./fonts/Rene Bieder - Galano Grotesque Bold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: "Galano Grotesque Semi Bold";
+  src: url('./fonts/Rene Bieder - Galano Grotesque.otf') format('truetype');
+}
+
+@font-face {
+  font-family: "Galano Grotesque Medium";
+  src: url('./fonts/Rene Bieder - Galano Grotesque Medium.otf') format('truetype');
+}
+
+
+@font-face {
+  font-family: "Galano Grotesque";
+  src: url('./fonts/Rene Bieder - Galano Grotesque.otf') format('truetype');
+}
+body{
+  font-size:inherit !important;
+  background:#fff !important;
+}
+
+html {
+  font: 400 16px/1.7 muli,sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+h1,
+h2,
+h3,
+h4,
+h5{
+  font-family: 'Galano Grotesque Semi Bold', muli sans-serif !important;
+  color:#222;
+}
+h1, h2 {
+  font-weight: 700 !important;
+}
+h1 {
+  font-size: 36px !important;
+}
+h2{
+  font-size:30px !important;
+}
+h4 {
+  font-weight: 900 !important;
+  font-size: 20px !important;
+}
+p {
+  font-family: muli,sans-serif;
+  line-height: 1.75em;
+}
+.mainAppBody a {
+    color: #337ab7;
+}
+strong{
+  font-family: 'Galano Grotesque Semi Bold', muli sans-serif !important;
+}
+.margin-medium-bottom{
+  margin-bottom:30px;
+}
+.margin-bottom-remove{
+  margin-bottom:0;
+}
+.margin-small-top{
+  margin-top:15px;
+}
+.margin-top{
+  margin-top:30px;
+}
+.margin-right{
+  margin-right:15px;
+}
+.mainAppWrapper{
+  position: relative;
+  height: 100vh;
+}
+.mainAppBody{
+position: relative;
+padding:30px;
+}
+.mainAppHeader{
+  text-align: center;
+  margin-bottom: 30px;
+}
+.mainAppHeader h2{
+  margin:20px 0px;
+}
+.containerWrapper.container {
+  padding-left:0px;
+  margin-left:0px;
+}
+.modal-dialog {
+  max-width: 100% !important;
+  height: 100%;
+}
+.modal-content{
+  height:100%;
+}
+.modal{
+  padding:0 !important;
+}
+.modal-dialog{
+  margin: 0 !important;
+}
+.modal-content{
+  border-radius: 0 !important;
+  overflow-y: scroll;
+}
+.modalClose{
+  float:right;
+  color:#333;
+  opacity: .5;
+}
+.modalClose:hover{
+  text-decoration: none;
+  opacity: 1;
+  color:#333;
+  cursor: pointer;
+}
+.modal-header {
+  padding: 30px 15px !important;
+  margin-bottom: 30px;
+}
+[class^=social-] svg {
+  width: 1.75em;
+  height: 1.75em;
+  fill: #fff;
+}
+.icon {
+  top: -1px;
+  max-width: 100%;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  fill: currentColor;
+  vertical-align: middle;
+}
+[class^=social-] {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url(./media/pattern.png);
+  background-repeat: no-repeat;
+  text-align: center;
+  line-height: 50px;
+  transform-origin: center center;
+  margin-right: 10px;
+}
+.social-github {
+  background-position: 45% 70%;
+}
+.social-linkedin {
+  background-position: 70% 10%;
+}
+.social-facebook {
+  background-position: 50% 25%;
+}
+.social-email {
+  background-position: 70%;
+}
+.flex {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.flex-center {
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+[class^=social-]:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,.3);
+  transform: translateY(-2px);
+}
+.hidden{
+  display:none;
+}
+.about-trigger{
+  background-color: transparent;
+  background-image: url(./media/pattern.png)!important;
+  background-repeat: no-repeat;
+  color: #fff !important;
+  background-position: 70% 90%!important;
+}
+.main-btn{
+  margin: 0;
+  padding: 0 32px;
+  height: 48px;
+  border: 0;
+  border-radius: 3px;
+  background: #ececec;
+  box-shadow: 0 0 15px rgba(0,0,0,.15);
+  color: #333;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  font: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 48px;
+  transition: all .25s cubic-bezier(.645,.045,.355,1);
+  transform-origin: center center;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: muli,sans-serif;
+}
+.text-center{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.float-left{
+  float:left;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.margin-remove{
+  margin-top:0;
+  margin-bottom:0;
+}
+.resume-intro-left{
+  float:left;
+}
+.resume-intro-right{
+  float:right;
+  margin-top:30px;
+}
+.resume-into-title {
+  margin-top:15px;
+  float:left;
+}
+.link-muted, .link-muted a, .link-muted a:hover, .link-muted:hover{
+  color:#444;
+}
+.skill hr{
+  display:none;
+}
+.progress {
+  height: 15px !important;
+  margin-bottom: 5px !important;
+}
+.customProgress.progress-bar {
+  background-color: #03adf7;
+  background-image: none;
+}
+.container {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.bio{
+  padding:0 15px;
+}
+.single-exp,
+.single-project{
+  position: relative;
+}
+.badge {
+  position: absolute;
+  top: 0;
+  right:0;
+  background: #1d8acb;
+  font-weight: 700;
+  text-transform: none;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 3px !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+  padding: 5px 10px !important;
+  font-size: 12px !important;
+  line-height: 16px !important;
+}
+.badge-success {
+  border-color: #00cd8d !important;
+  background: #00cd8d !important;
+  color: #fff;
+}
+.badge-info {
+  border-color: #1489fe !important;
+  background: #1489fe !important;
+  color: #fff;
+}
+@media (min-width: 1224px){
+  body{
+    background: rgba(250,250,250,.85) !important;
+  }
+  .mainAppBody{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding:30px;
+    margin:50px 0px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 0 6px -2px rgba(0,0,0,.15);
+    background-color: #fff;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (min-width: 1440){
+  .mainAppBody{
+    padding:0;
+  }
 }
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
